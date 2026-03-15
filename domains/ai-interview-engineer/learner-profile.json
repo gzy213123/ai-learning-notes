@@ -1,0 +1,40 @@
+{
+  "domain": "ai-interview-engineer",
+  "traits": {
+    "prefersAnalogies": {
+      "value": false,
+      "confidence": 0.2
+    },
+    "scaffoldingLevel": {
+      "value": "medium",
+      "confidence": 0.5
+    },
+    "challengeAppetite": {
+      "value": "medium",
+      "confidence": 0.5
+    },
+    "codingPreference": {
+      "value": "python-first",
+      "confidence": 0.4
+    },
+    "profile": {
+      "value": "llm-application-oriented",
+      "confidence": 0.7
+    },
+    "expressionGap": {
+      "value": true,
+      "confidence": 0.8
+    }
+  },
+  "observedStrengths": [
+    "接触过 Codex、LLM、Agent、RAG 的基本用法",
+    "知道过拟合与欠拟合的大方向区别",
+    "对 AI 应用层有实际感知"
+  ],
+  "observedWeaknesses": [
+    "概念解释不够精确，容易停留在感觉懂",
+    "机器学习和深度学习底层机制不够扎实",
+    "面试表达中 trade-off 和方法边界不够清楚"
+  ],
+  "updatedAt": "2026-03-15"
+}

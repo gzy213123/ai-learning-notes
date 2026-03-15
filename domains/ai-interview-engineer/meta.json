@@ -1,0 +1,17 @@
+{
+  "domain": "ai-interview-engineer",
+  "name": "AI算法岗与AI开发工程师面试",
+  "goals": [
+    "系统补齐 AI 算法工程师面试核心知识",
+    "系统补齐 AI 开发工程师面试核心知识",
+    "建立可持续迭代的项目、刷题、面试表达能力"
+  ],
+  "targetRoles": [
+    "AI算法工程师",
+    "AI开发工程师"
+  ],
+  "language": "zh-CN",
+  "status": "initialized",
+  "createdAt": "2026-03-15",
+  "updatedAt": "2026-03-15"
+}

@@ -1,0 +1,299 @@
+{
+  "domain": "ai-interview-engineer",
+  "nodes": [
+    {
+      "id": "python-and-coding",
+      "name": "Python基础与工程编码",
+      "status": "unknown",
+      "confidence": 0.2,
+      "dependencies": [],
+      "relations": [
+        {
+          "type": "requires",
+          "target": "data-structures-and-algorithms"
+        },
+        {
+          "type": "requires",
+          "target": "pytorch-engineering"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "data-structures-and-algorithms",
+      "name": "数据结构与算法",
+      "status": "unknown",
+      "confidence": 0.15,
+      "dependencies": [
+        "python-and-coding"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "interview-coding"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "linear-algebra-probability-calculus",
+      "name": "线性代数、概率统计、微积分基础",
+      "status": "unknown",
+      "confidence": 0.15,
+      "dependencies": [],
+      "relations": [
+        {
+          "type": "requires",
+          "target": "machine-learning-basics"
+        },
+        {
+          "type": "requires",
+          "target": "deep-learning-basics"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "machine-learning-basics",
+      "name": "机器学习基础",
+      "status": "weak",
+      "confidence": 0.35,
+      "dependencies": [
+        "linear-algebra-probability-calculus"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "model-evaluation-and-bias-variance"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "model-evaluation-and-bias-variance",
+      "name": "模型评估、过拟合与偏差方差",
+      "status": "weak",
+      "confidence": 0.4,
+      "dependencies": [
+        "machine-learning-basics"
+      ],
+      "relations": [],
+      "sessionHistory": [
+        {
+          "date": "2026-03-15",
+          "result": "partial",
+          "notes": "能区分过拟合和欠拟合，但对解决策略不够准确，把过拟合和加深模型混在一起。"
+        }
+      ]
+    },
+    {
+      "id": "deep-learning-basics",
+      "name": "深度学习基础",
+      "status": "unknown",
+      "confidence": 0.25,
+      "dependencies": [
+        "linear-algebra-probability-calculus",
+        "machine-learning-basics"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "cnn-rnn-transformer"
+        },
+        {
+          "type": "extends",
+          "target": "training-and-optimization"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "training-and-optimization",
+      "name": "训练流程与优化方法",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "deep-learning-basics"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    },
+    {
+      "id": "cnn-rnn-transformer",
+      "name": "CNN、RNN、Transformer架构",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "deep-learning-basics"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "nlp-and-llm"
+        },
+        {
+          "type": "extends",
+          "target": "cv-basics"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "cv-basics",
+      "name": "计算机视觉基础",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "cnn-rnn-transformer"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    },
+    {
+      "id": "nlp-and-llm",
+      "name": "NLP与大模型基础",
+      "status": "learning",
+      "confidence": 0.45,
+      "dependencies": [
+        "cnn-rnn-transformer"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "llm-training-and-alignment"
+        },
+        {
+          "type": "extends",
+          "target": "rag-and-agents"
+        }
+      ],
+      "sessionHistory": [
+        {
+          "date": "2026-03-15",
+          "result": "partial",
+          "notes": "了解 LLM、Agent、RAG 原理轮廓，但表达深度和机制细节仍不稳定。"
+        }
+      ]
+    },
+    {
+      "id": "llm-training-and-alignment",
+      "name": "大模型训练、微调与对齐",
+      "status": "unknown",
+      "confidence": 0.05,
+      "dependencies": [
+        "nlp-and-llm",
+        "training-and-optimization"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    },
+    {
+      "id": "rag-and-agents",
+      "name": "RAG、Agent与AI应用架构",
+      "status": "learning",
+      "confidence": 0.5,
+      "dependencies": [
+        "nlp-and-llm",
+        "python-and-coding"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "backend-and-system-design"
+        }
+      ],
+      "sessionHistory": [
+        {
+          "date": "2026-03-15",
+          "result": "partial",
+          "notes": "有使用经验，知道基本原理，但缺少清晰的系统化表达。"
+        }
+      ]
+    },
+    {
+      "id": "pytorch-engineering",
+      "name": "PyTorch与实验工程实践",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "python-and-coding",
+        "deep-learning-basics"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "training-and-optimization"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "backend-and-system-design",
+      "name": "后端基础与系统设计",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "python-and-coding"
+      ],
+      "relations": [
+        {
+          "type": "extends",
+          "target": "deployment-and-mLOps"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "deployment-and-mLOps",
+      "name": "部署、推理优化与MLOps",
+      "status": "unknown",
+      "confidence": 0.05,
+      "dependencies": [
+        "backend-and-system-design",
+        "pytorch-engineering"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    },
+    {
+      "id": "paper-reading-and-projects",
+      "name": "论文阅读、项目复盘与亮点表达",
+      "status": "unknown",
+      "confidence": 0.15,
+      "dependencies": [
+        "machine-learning-basics",
+        "deep-learning-basics"
+      ],
+      "relations": [
+        {
+          "type": "relates-to",
+          "target": "behavioral-interview"
+        }
+      ],
+      "sessionHistory": []
+    },
+    {
+      "id": "interview-coding",
+      "name": "手撕代码与在线编程",
+      "status": "unknown",
+      "confidence": 0.1,
+      "dependencies": [
+        "data-structures-and-algorithms"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    },
+    {
+      "id": "behavioral-interview",
+      "name": "项目表达、场景题与行为面",
+      "status": "unknown",
+      "confidence": 0.15,
+      "dependencies": [
+        "paper-reading-and-projects"
+      ],
+      "relations": [],
+      "sessionHistory": []
+    }
+  ],
+  "updatedAt": "2026-03-15"
+}

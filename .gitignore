@@ -1,0 +1,15 @@
+# Default: ignore everything in this workspace subtree.
+*
+
+# Keep this file tracked.
+!.gitignore
+!README.md
+
+# Ignore editor metadata.
+.vscode/
+
+# Track learning docs only.
+!domains/
+domains/*
+!domains/ai-interview-engineer/
+!domains/ai-interview-engineer/**
